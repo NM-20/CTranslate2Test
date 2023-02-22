@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{8ac5f861-f6b5-46d7-9ac2-0578bdc1361d}</ProjectGuid>
+    <RootNamespace>TranslationTest</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>bin\$(Configuration)\</OutDir>
+    <IntDir>$(BaseIntermediateOutputPath)$(Platform)\$(Configuration)\</IntDir>
+    <IncludePath>$(ProjectDir);$(ProjectDir)include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)lib\$(Platform);$(IntDir);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>bin\$(Configuration)\</OutDir>
+    <IntDir>$(BaseIntermediateOutputPath)$(Platform)\$(Configuration)\</IntDir>
+    <IncludePath>$(ProjectDir);$(ProjectDir)include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)lib\$(Platform);$(IntDir);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)externals\CTranslate2\build\$(Configuration)\;$(ProjectDir)externals\Tokenizer\build\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ctranslate2.lib;OpenNMTTokenizer.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PreBuildEvent>
+      <Command>xcopy "$(ProjectDir)externals\CTranslate2\build\$(Configuration)\ctranslate2.dll" "bin\$(Configuration)\" /y
+xcopy "$(ProjectDir)externals\Tokenizer\build\$(Configuration)\OpenNMTTokenizer.dll" "bin\$(Configuration)\" /y
+xcopy "$(ProjectDir)res\" "bin\$(Configuration)\" /s /y</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)externals\CTranslate2\build\$(Configuration)\;$(ProjectDir)externals\Tokenizer\build\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ctranslate2.lib;OpenNMTTokenizer.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PreBuildEvent>
+      <Command>xcopy "$(ProjectDir)externals\CTranslate2\build\$(Configuration)\ctranslate2.dll" "bin\$(Configuration)\" /y
+xcopy "$(ProjectDir)externals\Tokenizer\build\$(Configuration)\OpenNMTTokenizer.dll" "bin\$(Configuration)\" /y
+xcopy "$(ProjectDir)res\" "bin\$(Configuration)\" /s /y</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="TranslationTest.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\ctranslate2\allocator.h" />
+    <ClInclude Include="include\ctranslate2\batch_reader.h" />
+    <ClInclude Include="include\ctranslate2\buffered_translation_wrapper.h" />
+    <ClInclude Include="include\ctranslate2\decoding.h" />
+    <ClInclude Include="include\ctranslate2\decoding_utils.h" />
+    <ClInclude Include="include\ctranslate2\devices.h" />
+    <ClInclude Include="include\ctranslate2\generation.h" />
+    <ClInclude Include="include\ctranslate2\generator.h" />
+    <ClInclude Include="include\ctranslate2\layers\attention.h" />
+    <ClInclude Include="include\ctranslate2\layers\common.h" />
+    <ClInclude Include="include\ctranslate2\layers\decoder.h" />
+    <ClInclude Include="include\ctranslate2\layers\encoder.h" />
+    <ClInclude Include="include\ctranslate2\layers\layers.h" />
+    <ClInclude Include="include\ctranslate2\layers\transformer.h" />
+    <ClInclude Include="include\ctranslate2\layers\whisper.h" />
+    <ClInclude Include="include\ctranslate2\logging.h" />
+    <ClInclude Include="include\ctranslate2\models\language_model.h" />
+    <ClInclude Include="include\ctranslate2\models\model.h" />
+    <ClInclude Include="include\ctranslate2\models\model_factory.h" />
+    <ClInclude Include="include\ctranslate2\models\model_reader.h" />
+    <ClInclude Include="include\ctranslate2\models\sequence_to_sequence.h" />
+    <ClInclude Include="include\ctranslate2\models\transformer.h" />
+    <ClInclude Include="include\ctranslate2\models\whisper.h" />
+    <ClInclude Include="include\ctranslate2\ops\activation.h" />
+    <ClInclude Include="include\ctranslate2\ops\add.h" />
+    <ClInclude Include="include\ctranslate2\ops\bias_add.h" />
+    <ClInclude Include="include\ctranslate2\ops\concat.h" />
+    <ClInclude Include="include\ctranslate2\ops\conv1d.h" />
+    <ClInclude Include="include\ctranslate2\ops\cos.h" />
+    <ClInclude Include="include\ctranslate2\ops\dequantize.h" />
+    <ClInclude Include="include\ctranslate2\ops\gather.h" />
+    <ClInclude Include="include\ctranslate2\ops\gelu.h" />
+    <ClInclude Include="include\ctranslate2\ops\gemm.h" />
+    <ClInclude Include="include\ctranslate2\ops\gumbel_max.h" />
+    <ClInclude Include="include\ctranslate2\ops\identity.h" />
+    <ClInclude Include="include\ctranslate2\ops\layer_norm.h" />
+    <ClInclude Include="include\ctranslate2\ops\log.h" />
+    <ClInclude Include="include\ctranslate2\ops\matmul.h" />
+    <ClInclude Include="include\ctranslate2\ops\mean.h" />
+    <ClInclude Include="include\ctranslate2\ops\min_max.h" />
+    <ClInclude Include="include\ctranslate2\ops\mul.h" />
+    <ClInclude Include="include\ctranslate2\ops\multinomial.h" />
+    <ClInclude Include="include\ctranslate2\ops\op.h" />
+    <ClInclude Include="include\ctranslate2\ops\ops.h" />
+    <ClInclude Include="include\ctranslate2\ops\quantize.h" />
+    <ClInclude Include="include\ctranslate2\ops\relu.h" />
+    <ClInclude Include="include\ctranslate2\ops\reshape.h" />
+    <ClInclude Include="include\ctranslate2\ops\rms_norm.h" />
+    <ClInclude Include="include\ctranslate2\ops\sin.h" />
+    <ClInclude Include="include\ctranslate2\ops\softmax.h" />
+    <ClInclude Include="include\ctranslate2\ops\split.h" />
+    <ClInclude Include="include\ctranslate2\ops\squeeze.h" />
+    <ClInclude Include="include\ctranslate2\ops\sub.h" />
+    <ClInclude Include="include\ctranslate2\ops\swish.h" />
+    <ClInclude Include="include\ctranslate2\ops\tanh.h" />
+    <ClInclude Include="include\ctranslate2\ops\tile.h" />
+    <ClInclude Include="include\ctranslate2\ops\topk.h" />
+    <ClInclude Include="include\ctranslate2\ops\transpose.h" />
+    <ClInclude Include="include\ctranslate2\ops\unsqueeze.h" />
+    <ClInclude Include="include\ctranslate2\padder.h" />
+    <ClInclude Include="include\ctranslate2\primitives.h" />
+    <ClInclude Include="include\ctranslate2\profiler.h" />
+    <ClInclude Include="include\ctranslate2\random.h" />
+    <ClInclude Include="include\ctranslate2\replica_pool.h" />
+    <ClInclude Include="include\ctranslate2\sampling.h" />
+    <ClInclude Include="include\ctranslate2\scoring.h" />
+    <ClInclude Include="include\ctranslate2\storage_view.h" />
+    <ClInclude Include="include\ctranslate2\thread_pool.h" />
+    <ClInclude Include="include\ctranslate2\translation.h" />
+    <ClInclude Include="include\ctranslate2\translator.h" />
+    <ClInclude Include="include\ctranslate2\types.h" />
+    <ClInclude Include="include\ctranslate2\utils.h" />
+    <ClInclude Include="include\ctranslate2\vocabulary.h" />
+    <ClInclude Include="include\ctranslate2\vocabulary_map.h" />
+    <ClInclude Include="include\half_float\half.hpp" />
+    <ClInclude Include="include\nlohmann\json.hpp" />
+    <ClInclude Include="include\onmt\BPE.h" />
+    <ClInclude Include="include\onmt\BPELearner.h" />
+    <ClInclude Include="include\onmt\ITokenizer.h" />
+    <ClInclude Include="include\onmt\opennmttokenizer_export.h" />
+    <ClInclude Include="include\onmt\SentencePiece.h" />
+    <ClInclude Include="include\onmt\SentencePieceLearner.h" />
+    <ClInclude Include="include\onmt\SPMLearner.h" />
+    <ClInclude Include="include\onmt\SubwordEncoder.h" />
+    <ClInclude Include="include\onmt\SubwordLearner.h" />
+    <ClInclude Include="include\onmt\Token.h" />
+    <ClInclude Include="include\onmt\Tokenizer.h" />
+    <ClInclude Include="include\onmt\unicode\Unicode.h" />
+    <ClInclude Include="include\onmt\Vocab.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
