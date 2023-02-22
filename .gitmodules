@@ -1,7 +1,6 @@
-[submodule "CTranslate2"]
-    path = "externals/CTranslate2"
-    url = https://github.com/OpenNMT/CTranslate2.git
-
-[submodule "Tokenizer"]
-    path = "externals/Tokenizer"
-    url = https://github.com/OpenNMT/Tokenizer.git
+[submodule "externals/CTranslate2"]
+	path = externals/CTranslate2
+	url = https://github.com/OpenNMT/CTranslate2
+[submodule "externals/Tokenizer"]
+	path = externals/Tokenizer
+	url = https://github.com/OpenNMT/Tokenizer
