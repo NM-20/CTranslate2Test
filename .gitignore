@@ -397,13 +397,3 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 
-# -----------------------------------------------------------------------------
-# End of template
-
-# External dependencies (should be replaced with .gitmodules, for example)
-externals/
-
-# Resources (for the sake of avoiding file size limits)
-# All this project utilizes in res is models, which the user
-# can retrieve
-res/
