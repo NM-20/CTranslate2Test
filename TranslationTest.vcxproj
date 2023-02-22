@@ -126,9 +126,9 @@
       <AdditionalDependencies>ctranslate2.lib;OpenNMTTokenizer.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
-      <Command>xcopy "$(ProjectDir)externals\CTranslate2\build\$(Configuration)\ctranslate2.dll" "bin\$(Configuration)\" /y
-xcopy "$(ProjectDir)externals\Tokenizer\build\$(Configuration)\OpenNMTTokenizer.dll" "bin\$(Configuration)\" /y
-xcopy "$(ProjectDir)res\" "bin\$(Configuration)\" /s /y</Command>
+      <Command>xcopy "$(ProjectDir)externals\CTranslate2\build\$(Configuration)\ctranslate2.dll" "$(OutDir)" /y
+xcopy "$(ProjectDir)externals\Tokenizer\build\$(Configuration)\OpenNMTTokenizer.dll" "$(OutDir)" /y
+xcopy "$(ProjectDir)res\" "$(OutDir)" /s /y</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -151,9 +151,9 @@ xcopy "$(ProjectDir)res\" "bin\$(Configuration)\" /s /y</Command>
       <AdditionalDependencies>ctranslate2.lib;OpenNMTTokenizer.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
-      <Command>xcopy "$(ProjectDir)externals\CTranslate2\build\$(Configuration)\ctranslate2.dll" "bin\$(Configuration)\" /y
-xcopy "$(ProjectDir)externals\Tokenizer\build\$(Configuration)\OpenNMTTokenizer.dll" "bin\$(Configuration)\" /y
-xcopy "$(ProjectDir)res\" "bin\$(Configuration)\" /s /y</Command>
+      <Command>xcopy "$(ProjectDir)externals\CTranslate2\build\$(Configuration)\ctranslate2.dll" "$(OutDir)" /y
+xcopy "$(ProjectDir)externals\Tokenizer\build\$(Configuration)\OpenNMTTokenizer.dll" "$(OutDir)" /y
+xcopy "$(ProjectDir)res\" "$(OutDir)" /s /y</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
